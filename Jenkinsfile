@@ -21,7 +21,7 @@ pipeline {
                     $class: 'GitSCM',
                     branches: [[name: '*/main']], 
                     userRemoteConfigs: [[
-                        url: 'https://github.com/mmouhib/pi', 
+                        url: 'https://github.com/YosriJaziri/Devops-yosri', 
                     ]]
                 ]
                 // Verify checkout
@@ -169,7 +169,7 @@ pipeline {
                                 # echo \$NEXUS_PASSWORD | docker login -u \$NEXUS_USERNAME --password-stdin
                                 
                                 # Use the docker-compose.yml file from the checked out repository
-                                docker compose -f docker-compose.yml -p pi up mysql backend-app -d
+                                docker compose -f docker-compose.yml -p Devops-yosri up mysql backend-app -d
                             """
                         }
                     }
